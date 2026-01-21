@@ -1,0 +1,19 @@
+/*google icons cdn link*/
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
+
+/*tailwind css url*/
+@import "tailwindcss";
+
+
+@theme {
+  /* Naya color add karne ke liye */
+  --color-brand-blue: #007bff;
+  --color-premium-gold: #d4af37;
+  
+  /* Existing color ki shade badalne ke liye */
+  --color-blue-100: #1b3f6b;
+  --color-blue-200: #8094ad;
+  --color-blue-500: #19406a;
+  --color-blue-700: #002b5b;
+  --color-green-400: #36c6c0;
+}
