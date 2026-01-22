@@ -1,9 +1,10 @@
 import '../App.css'
+import Sidebar from '../components/Sidebar';
 
 function Dashboard() {
   return(
-    <div>
-      heyy, this is Dashboard page..
+    <div className='h-screen w-full bg-pink-200 flex'>
+      <Sidebar />
     </div>
   )
 }
