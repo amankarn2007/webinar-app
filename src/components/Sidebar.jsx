@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 function Sidebar(){
 
     return(
-        <div className="flex flex-col w-88 bg-white h-full">
+        <div className="flex flex-col w-85 bg-white h-full hidden md:block z-1 shadow-xl">
             {/*logo and img*/}
             <div className="mt-3 px-6 flex items-center place-content-between">
 
@@ -38,11 +38,11 @@ function Sidebar(){
                 <div className="flex items-center place-content-between px-5 py-2 rounded-lg mt-2 opacity-60 hover:bg-blue-50 hover:opacity-100">
                     Settings <i class="fa-solid fa-gear"></i>
                 </div>
-
-                <div></div>
             </div>
         </div>
     )
 }
 
 export default Sidebar;
+
+//before "md size" make screen "block", after that screen will be "default hidden"

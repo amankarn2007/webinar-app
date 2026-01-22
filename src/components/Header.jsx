@@ -5,7 +5,7 @@ function Header() {
     return(
         <nav className='w-full h-20 bg-gray-800 flex justify-between items-center'>
             <div>
-                <Link to="/" className="text-3xl font-normal mb-4 px-8">
+                <Link to="/" className="text-3xl text-white font-normal mb-4 px-8">
                     <span className='material-symbols-outlined text-green-200 px-4 text-3xl!'>desktop_windows
                     </span> 
                     <span className='text-green-400'>Webinar</span>.gg
