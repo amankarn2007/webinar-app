@@ -1,5 +1,5 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function Sidebar({ isOpen, toggle }){
 
@@ -10,7 +10,7 @@ function Sidebar({ isOpen, toggle }){
                 {/*logo, menu closer and img*/}
                 <div className="mt-3 px-6 flex items-center place-content-between">
     
-                    <Link to="/dashboard" className="text-md text-white w-34 flex bg-blue-700 h-10 justify-center items-center rounded-lg">
+                    <Link to="/dashboard" className="text-md text-white w-34 flex bg-blue-700 h-10 justify-center items-center rounded-lg active:bg-blue-750">
     
                         <span className='material-symbols-outlined text-green-200 pr-2 text-md!'>
                             desktop_windows
@@ -26,16 +26,16 @@ function Sidebar({ isOpen, toggle }){
                         <img src="../images/aman.png" alt="aman" className="h-14 w-13 rounded-xl"/>
                     </div>
                 </div>
-                
-                <sideBarCloser />
+
                 
                 {/*menu*/}
-                <div className="px-5 mt-8 text-lg">
+                <div className="px-5 mt-8 text-lg cursor-pointer">
                     <SideBarItems label={"Home"} icon="fa-house" />
                     <SideBarItems label={"Webinars"} icon="fa-users" />
                     <SideBarItems label={"Billing"} icon="fa-credit-card" />
                     <SideBarItems label={"User Management"} icon="fa-users-gear" />
                     <SideBarItems label={"Settings"} icon="fa-gear" />
+                    <SideBarItems label={"Logout"} icon="fa-arrow-right-from-bracket" navigateTo="/" />
                 </div>
             </div>
 
@@ -44,9 +44,11 @@ function Sidebar({ isOpen, toggle }){
 }
 
 //Reusing SideBarItems Component
-function SideBarItems({label, icon}) {
+function SideBarItems({label, icon, navigateTo}) { //navigateTo = link of redirect
+    const navigate = useNavigate();
+
     return(
-        <div className="flex items-center place-content-between px-5 py-2 rounded-lg mt-2 opacity-60 hover:bg-blue-50 hover:opacity-100">
+        <div className="flex items-center place-content-between px-5 py-2 rounded-lg mt-2 opacity-60 hover:bg-blue-50 hover:opacity-100" onClick={() => navigate(navigateTo)}>
             { label } 
             <i className={`fa-solid ${icon}`}></i>
         </div>
@@ -57,3 +59,4 @@ export default Sidebar;
 
 //before "md size" make screen "block", after that screen will be "default hidden"
 //hidden md:block   for responcive sidebar
+//navigate(navigateTo)} ==>  "navigate" redirect karega aur "navigateTo" (link of redirection)

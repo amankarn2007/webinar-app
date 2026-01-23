@@ -1,7 +1,7 @@
 
 function CalenderView() {
     return(
-        <section className="ml-5 mt-10 h-86 w-120 bg-white rounded-2xl flex flex-col px-4 shadow-xl">
+        <section className="ml-5 mt-10 h-86 w-120 bg-white rounded-2xl flex flex-col px-4 shadow-xl cursor-pointer">
             {/*date section*/}
             <div className="flex bg-blue-50 rounded-lg mt-5 py-2 px-4 place-content-between items-center">
                 <div className="flex space-x-2 justify-center">
@@ -15,19 +15,19 @@ function CalenderView() {
                 </div>
             </div>
 
-            <div className="h-15 mt-2 rounded-lg px-4 py-2">
+            <div className="h-15 mt-2 rounded-lg px-4 py-2 hover:bg-blue-50">
                 <CalenderTimeTable eventStatus={"Live"} eventTitle={"UX Webinar"} />
             </div>
 
-            <div className="h-15 mt-2 rounded-lg px-4 py-2">
+            <div className="h-15 mt-2 rounded-lg px-4 py-2 hover:bg-blue-50">
                 <CalenderTimeTable eventStatus={"Upcoming"} eventTitle={"My First Webinar"} />
             </div>
 
-            <div className="h-15 mt-2 rounded-lg px-4 py-2">
+            <div className="h-15 mt-2 rounded-lg px-4 py-2 hover:bg-blue-50">
                 <CalenderTimeTable eventStatus={"Upcoming"} eventTitle={"Important Webinar"} />
             </div>
 
-            <div className="h-15 mt-2 rounded-lg px-4 py-2">
+            <div className="h-15 mt-2 rounded-lg px-4 py-2 hover:bg-blue-50">
                 <CalenderTimeTable eventStatus={"Upcoming"} eventTitle={"Webinar 1"} />
             </div>
         </section>
